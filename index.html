@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coursera Data Science Capstone - Final Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Coursera Data Science Capstone - Final Project">
+  <meta name="author" content="Seon Su Kim">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Coursera Data Science Capstone - Final Project</h1>
+    <h2>April 23, 2016</h2>
+    <p>Seon Su Kim<br/>This project predicts the next word as the user types in a word or phrase.</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This presentation file was produced as a part of the requirement for Data Science Capstone Course.</p></li>
+<li><p>The data used in this project is a large corpus of text documents from swiftkey (<a href="https://swiftkey.com/en">https://swiftkey.com/en</a>).</p></li>
+<li><p>The goal of the project is to build a predictive text model combined with a shiny app UI that will predict the next word as the user types a sentence similar to the way most smart phone keyboards are implemented today using the technology of Swiftkey.</p></li>
+<li><p>This presentation explains the prediction model and the shiny app that was developed.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Getting &amp; Cleaning the Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The Swiftkey Corpus from the link was used in this project.</p></li>
+<li><p><a href="https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip">https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip</a></p></li>
+<li><p>The data was downloaded and read into R. The sample data was then cleaned as a preparation for the analysis which includes converting to lowercase, removing punctuations, links, numbers, white spaces and special characters.</p></li>
+<li><p>A shiny app is then developed to predict the next word that comes after a word or phrase being typed in.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Prediction Algorithm</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The sample is cleaned to remove numbers, punctuations,links, white spaces, bad words and special characters.</p></li>
+<li><p>The Text Mining package library in R is used to build the base for the prediction of this project.</p></li>
+<li><p>A unigram, bigram and trigram were built from the data and the data is used to predict the next word based on the word or phrase typed by the user.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>The Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>A Shiny application was developed based on the next word prediction model described previously as shown below. </p></li>
+<li><p>You fist, type a phrase in the box below. And then, you will see the predicted next word of your phrase.</p></li>
+<li><p>The link to the app is <a href="http://ssk992.shinyapps.io/shiny/">http://ssk992.shinyapps.io/shiny/</a></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Getting &amp; Cleaning the Data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Prediction Algorithm'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The Application'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
